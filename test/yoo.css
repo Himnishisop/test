@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+.pricing-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.logo-box {
+  border: 2px solid cyan;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 24px;
+  color: cyan;
+  border-radius: 6px;
+}
+
+.toggle-buttons {
+  margin-bottom: 30px;
+}
+
+.toggle-buttons button {
+  background: #eee;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.toggle-buttons button.active {
+  background: cyan;
+  color: #fff;
+}
+
+.plans {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.plan {
+  border: 1px solid #ddd;
+  padding: 30px 20px;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #eee;
+}
+
+.plan h2 {
+  color: cyan;
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.plan ul {
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.plan ul li {
+  margin: 5px 0;
+}
+
+.plan button {
+  background: cyan;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.az-faq {
+  margin-top: 60px;
+}
+
+.az-faq a {
+  color: cyan;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#payment-section {
+  display: none;
+  margin-top: 40px;
+  border: 2px solid cyan;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#payment-section input {
+  width: 90%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#payment-section button {
+  background: cyan;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ROINZOO Pricing Plans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="pricing-section">
+    <div class="header-logo">
+      <div class="logo-box">ROINZOO</div>
+    </div>
+
+    <div class="toggle-buttons">
+      <button class="active" onclick="showPlans('weekly')">Weekly</button>
+      <button onclick="showPlans('monthly')">Monthly</button>
+    </div>
+
+    <div class="plans" id="weekly-plans">
+      <div class="plan">
+        <h2>Weekly Plan</h2>
+        <p class="plan-price">₹499 / week</p>
+        <ul>
+          <li>7 Campaigns</li>
+          <li>Support Included</li>
+          <li>Basic Reports</li>
+        </ul>
+        <button onclick="showPayment('Weekly Plan', 499)">Get Started</button>
+      </div>
+    </div>
+
+    <div class="plans" id="monthly-plans" style="display:none;">
+      <div class="plan">
+        <h2>Advanced Price Plan</h2>
+        <p class="plan-price">₹1999 / month</p>
+        <ul>
+          <li>Unlimited Campaigns</li>
+          <li>Priority Support</li>
+          <li>Advanced Analytics</li>
+        </ul>
+        <button onclick="showPayment('Advanced Price Plan', 1999)">Get Started</button>
+      </div>
+    </div>
+
+    <div class="az-faq">
+      <h3>Have Questions?</h3>
+      <p>Check out our frequently asked questions or contact our support team for more information.</p>
+      <a href="https://wa.me/917679800308" target="_blank">Contact Now</a>
+    </div>
+
+    <div id="payment-section">
+      <h3>Complete Your Payment</h3>
+      <p id="selected-plan"></p>
+      <form onsubmit="alert('This is just a demo. Payment not processed.'); return false;">
+        <input type="text" placeholder="Your Name" required><br>
+        <input type="email" placeholder="Email" required><br>
+        <input type="text" placeholder="Phone Number" required><br>
+        <button type="submit">Pay Now</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function showPlans(planType) {
+      document.getElementById('weekly-plans').style.display = (planType === 'weekly') ? 'flex' : 'none';
+      document.getElementById('monthly-plans').style.display = (planType === 'monthly') ? 'flex' : 'none';
+      const buttons = document.querySelectorAll('.toggle-buttons button');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      if (planType === 'weekly') buttons[0].classList.add('active');
+      else buttons[1].classList.add('active');
+    }
+
+    function showPayment(planName, price) {
+      document.getElementById('payment-section').style.display = 'block';
+      document.getElementById('selected-plan').innerText = `You selected: ${planName} - ₹${price}`;
+      document.getElementById('payment-section').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
